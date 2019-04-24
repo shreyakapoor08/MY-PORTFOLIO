@@ -27,6 +27,9 @@ ul{
     transition: background-color 0.3s;
     /*background-color: #3d405b;*/
     color: #fff;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
 }
 
 #header.open #navigation{
@@ -42,6 +45,7 @@ ul{
 #logo{
     width: 75%;
     display: inline-block;
+    font-weight: bold;
 }
 
 #nav-toggle{
@@ -71,15 +75,17 @@ ul{
 #navigation{
     width: 300px; /*giving it fixed position*/
     position: absolute;
+    left: 0;
     background-color: #3d405b;
     min-height: 100vh; /*vh is view port*/
-    transform: translateX(-350px);
+    transform: translateX(-300px);
     transition: transform 0.4s;
 }
 
 #navigation a{
     display: block; /*they will take complete line*/
     opacity: 0.8;
+    text-transform: uppercase;
 }
 
 navigation a:hover{
@@ -87,3 +93,59 @@ navigation a:hover{
 }
 
 /*header end*/
+
+/*intro start*/
+#intro{
+    background-image: linear-gradient(rgba(61,64,91,0.75),rgba(61,64,91,0.5)),url("../img/b2.jpg");
+    min-height: 520px;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+.intro-text{
+    position: relative;
+    top: 100px;
+    color: #fff;
+    font-size: 1.1em;
+    text-align: center;
+}
+.intro-text h1 strong,
+.intro-text h1 em{
+    font-size: 1.25em;
+    padding: 5px 0px;
+    display: block;
+    color: #e07a5f;
+    text-transform: uppercase;
+}
+.call-to-action{
+    margin: 20px 0px;
+}
+.intro-text .call-to-action{
+    width: 70%;
+    margin: auto;
+}
+.btn{
+    padding: 15px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+}
+.btn svg{
+    margin-right: 5px;
+}
+.btn-bg{
+    color: #fff;
+    background-color: #e07a5f;
+
+}
+.btn-highlight{
+    color: #fff;
+    background-color: #3d405b;
+
+}
+.intro-text .btn{
+    display: block;
+    margin: 10px 0px;
+}
+
+/*intro end*/
