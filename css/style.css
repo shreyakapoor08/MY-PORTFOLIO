@@ -1,0 +1,89 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'IBM Plex Serif', serif;
+}
+
+img{
+    max-width: 100%;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.container{
+    padding: 15px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/*header start*/
+#header{
+    transition: background-color 0.3s;
+    /*background-color: #3d405b;*/
+    color: #fff;
+}
+
+#header.open #navigation{
+    transform: translateX(0px);
+}
+#header.open #nav-toggle{
+    background-color: rgba(255,255,255,0.2);
+}
+#header.scrolled{
+    background-color: #3d405b;
+}
+
+#logo{
+    width: 75%;
+    display: inline-block;
+}
+
+#nav-toggle{
+    width: 70px;
+    display: inline-block;
+    font-size: 1.7em;
+    text-align: center;
+    padding: 5px;
+    background-color: rgba(0,0,0,.1);
+    border-radius: 10px;
+}
+
+#header a{
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px;
+}
+
+#logo a{
+    font-seze: 1.7em;
+    padding: 30px;
+    padding-left: 15px;
+    display: inline-block;
+}
+
+#navigation{
+    width: 300px; /*giving it fixed position*/
+    position: absolute;
+    background-color: #3d405b;
+    min-height: 100vh; /*vh is view port*/
+    transform: translateX(-350px);
+    transition: transform 0.4s;
+}
+
+#navigation a{
+    display: block; /*they will take complete line*/
+    opacity: 0.8;
+}
+
+navigation a:hover{
+    opacity: 1;
+}
+
+/*header end*/
