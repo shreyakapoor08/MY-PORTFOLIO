@@ -149,3 +149,73 @@ navigation a:hover{
 }
 
 /*intro end*/
+
+/*about me start*/
+#about-me{
+    background-image: linear-gradient(rgba(61,64,91,0.75),rgba(61,64,91,0.5)),url("../img/b3.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 20px 0px;
+    color: #fff;
+    text-align: center;
+}
+.whoiam-text h4{
+    padding: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2em;
+}
+.whoiam-text p{
+    padding: 10px 0px;
+}
+/*about me end*/
+
+/*services start*/
+.service-title{
+    font-size: 2em;
+    text-align: center;
+    padding: 20px 0px;
+    text-transform: uppercase;
+}
+.service{
+    margin: 20px 0px;
+    text-align: center;
+}
+.service:hover .service-icon{
+    background-color: #e07a5f;
+    outline: 5px solid #e07a5f;
+    outline-offset: 5px;
+}
+.service-icon{
+    font-size: 3.5em;
+    margin: 30px 0px;
+    background-color: rgba(0,0,0,.1);
+    display: inline-block;
+    padding: 20px;
+    width: 110px;
+    height: 110px;
+    transform: rotate(45deg);
+    transition: background-color 0.4s, outline 0.4s, outline-offset 0.4s;
+    color: #fff;
+    outline: 5px solid transparent;
+    outline-offset: 0px;
+}
+.service-icon svg{
+    transform: rotate(-45deg);
+}
+.service-title{
+    padding: 15px 0px;
+    font-size: 1.7em;
+    text-transform: uppercase;
+}
+.service-desc{
+    padding: 5px 0px;
+}
+.service:hover .service-desc{
+    opacity: 1;
+    transition: opacity 0.4s;
+}
+#services .service-desc{
+    opacity: 0;
+}
+/*services end*/
