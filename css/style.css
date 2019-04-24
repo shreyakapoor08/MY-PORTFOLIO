@@ -256,27 +256,28 @@ navigation a:hover{
 .events-container::before{
     content: '';
     display: block;
-    width: 20px;
     height: 100%;
+    background-color: rgba(0,0,0,0.2);
+    width: 25px;
     position: absolute;
-    background-color: rgba(0,0,0,0.1);
-    border-radius: 5px;
+    border-radius: 20px;
 }
 .event-date{
-    padding-left: 40px;
     font-size: 1.1em;
     font-style: italic;
     opacity: 0.9;
     padding: 10px 0;
+    padding-left: 40px;
+    position: relative;
 }
 .event-date:before{
     content: '';
     display: block;
-    left: 0;
+    background-color: #3d405b;
     width: 25px;
     height: 25px;
-    border-radius: 50%;
-    background-color: #3d405b;
+    left: 0;
+    border-radius: 100px;
     position: absolute;
 }
 .event-title{
