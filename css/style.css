@@ -23,6 +23,14 @@ ul{
 }
 
 /*header start*/
+
+.section-title{
+    text-align: center;
+    padding: 20px 0;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
 #header{
     transition: background-color 0.3s;
     /*background-color: #3d405b;*/
@@ -46,6 +54,7 @@ ul{
     width: 75%;
     display: inline-block;
     font-weight: bold;
+    font-size: 1.2em;  /*on own*/
 }
 
 #nav-toggle{
@@ -204,7 +213,7 @@ navigation a:hover{
     transform: rotate(-45deg);
 }
 .service-title{
-    padding: 15px 0px;
+    padding: 10px 0px;
     font-size: 1.7em;
     text-transform: uppercase;
 }
@@ -219,3 +228,75 @@ navigation a:hover{
     opacity: 0;
 }
 /*services end*/
+
+/*history start*/
+#history{
+    background-color: #e07a5f;
+    color: #fff;
+}
+.history{
+    margin: 30px 0px;
+}
+.history-title{
+    font-size: 1.2em;
+    padding: 10px 0px;
+}
+.history-title .icon{
+    color: #3d405b;
+    display: inline-block;
+    margin-right: 5px;
+}
+.history-title .text{
+    display: inline-block;
+}
+.events-container{
+    margin: 30px 0;
+    position: relative;
+}
+.events-container::before{
+    content: '';
+    display: block;
+    width: 20px;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
+.event-date{
+    padding-left: 40px;
+    font-size: 1.1em;
+    font-style: italic;
+    opacity: 0.9;
+    padding: 10px 0;
+}
+.event-date:before{
+    content: '';
+    display: block;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #3d405b;
+    position: absolute;
+}
+.event-title{
+    padding: 15px 0px;
+    font-size: 1.6em;
+    font-weight: bold;
+    padding-left: 40px;
+}
+.event-result{
+    font-style: italic;
+    opacity: 0.9;
+    font-size: 1.1em;
+    padding: 10px 0;
+    padding-left: 40px;
+}
+.event-desc{
+    padding: 5px 0px;
+    padding-left: 40px;
+}
+#history .btn{
+    display: block;
+}
+/*history end*/
