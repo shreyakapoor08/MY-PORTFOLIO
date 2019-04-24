@@ -301,3 +301,12 @@ navigation a:hover{
     display: block;
 }
 /*history end*/
+
+/*skills start*/
+#skills{
+    background-image: linear-gradient(rgba(61,64,91,0.75),rgba(61,64,91,0.5)),url("../img/b3.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
+/*skills end*/
