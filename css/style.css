@@ -310,3 +310,51 @@ navigation a:hover{
     color: white;
 }
 /*skills end*/
+
+/*portfolio start*/
+#portfolio{
+    background-color: #dddddd;
+}
+.work{
+    margin: 20px 0;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+    position: relative;
+}
+.work:hover .work-text{
+    opacity: 1;
+}
+.work-text{
+    background-color: white;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+.work-text h4{
+    font-size: 1.5em;
+    padding: 10px 0;
+}
+.work.one{
+    background-image: url("../img/piggame.JPG");
+    background-size: cover;
+}
+.work.two{
+    background-image: url("../img/forkify.JPG");
+    background-size: cover;
+}
+.work.three{
+    background-image: url("../img/piggame.JPG");
+    background-size: cover;
+}
+.work-icon{
+    position: absolute;
+    padding: 20px;
+    border-radius: 50%;
+    right: 10px;
+    bottom: 10px;
+    background-color: #3d405b;
+    color: #fff;
+    text-align: center;
+
+}
+
+/*portfolio end*/
