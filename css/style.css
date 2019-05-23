@@ -309,6 +309,74 @@ navigation a:hover{
     background-attachment: fixed;
     color: white;
 }
+.skill{
+    margin: 50px 0px;
+    text-align: center;
+   font-size: 1.2em;
+    position: relative;
+}
+.soft-skills .skill{
+    margin: 0px;
+}
+.skill .skill-icon svg{
+    height: 100px;
+    float: none;
+    stroke: #e07a5f;
+    stroke-width: 5px;
+    stroke-dasharray: 251;
+}
+.skill-icon.first svg{
+    stroke-dashoffset: 40;
+}
+.skill-icon.second svg{
+    stroke-dashoffset: 35;
+}
+.skill-icon.third svg{
+    stroke-dashoffset: 50;
+}
+.skill-icon.fourth svg{
+    stroke-dashoffset: 10;
+}
+.soft-skills .skill-rating{
+    position: relative;
+    top: -75px;
+    font-size: 1.5em;
+}
+.skill-title{
+    text-transform: uppercase;
+}
+.soft-skills .skill-title{
+    font-size: 1.5em;
+    position: relative;
+    top: -30px;
+}
+.technical-skills .skill-rating{
+    font-size: 1em;
+}
+.technical-skills .skill-title{
+    font-size: 1.5em;
+}
+.technical-skills .skill{
+    position: relative;
+}
+.technical-skills .skill-icon::after{
+    content: '';
+    width: 80%;
+    background-color: #e07a5f;
+    height: 25px;
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+}
+.technical-skills .skill-icon::before{
+    content: '';
+    width: 100%;
+    background-color: rgba(0,0,0,.2);
+    height: 25px;
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+}
 /*skills end*/
 
 /*portfolio start*/
@@ -519,3 +587,32 @@ form button{
     box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
 }
 /*contact us end*/
+
+/*footer start*/
+#footer{
+    background-color: #191c35;
+    color: #fff;
+    text-align: center;
+}
+#footer .social-links{
+    margin: 20px;
+    margin-bottom: 50px;
+}
+#footer .link{
+    display: inline-block;
+    background-color: rgba(0,0,0,0.2);
+    font-size: 1.2em;
+    padding: 20px;
+    margin: 5px;
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    border: 3px solid transparent;
+    transition: border 0.4s, color 0.4s;
+}
+#footer .link:hover{
+    border: 3px solid #e07a5f;
+    color: #e07a5f;
+}
+
+/*footer end*/
