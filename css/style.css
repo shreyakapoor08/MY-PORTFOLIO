@@ -40,6 +40,10 @@ ul{
     z-index: 99;
 }
 
+#header:hover{
+    background-color: #3d405b;
+}
+
 #header.open #navigation{
     transform: translateX(0px);
 }
@@ -616,3 +620,105 @@ form button{
 }
 
 /*footer end*/
+
+
+/*media query for tablets*/
+@media screen and (min-width: 750px) {
+    #header{
+
+    }
+    #navigation{
+        transform: translateX(0px);
+        width: 100%;
+        background-color: inherit;
+        padding-left: 15px;
+        min-height: auto;
+        position: static;
+    }
+    #nav-toggle{
+        display: none;
+    }
+    #navigation li{
+        display: inline-block;
+    }
+    #intro{
+        min-height: 600px;
+    }
+    .intro-text{
+        top: 200px;
+    }
+    .intro-text .btn{
+        display: inline-block;
+        margin: 10px;
+    }
+    .service,
+    .history,
+    .skill,
+    .work,
+    .fact,
+    .testimonial{
+        display: inline-block;
+        width: 47.5%;
+        margin: 1%;
+    }
+    .testimonial{
+        margin-top: 80px;
+    }
+    .testimonials-container{
+        text-align: center;
+    }
+    #skills{
+        padding-bottom: 50px;
+    }
+    #get-in-touch{
+        text-align: center;
+    }
+    #history .call-to-action{
+        display: inline-block;
+        width: 200px;
+        margin: auto;
+    }
+    #contact-us form{
+        max-width: 500px;
+        margin: 30px auto;
+    }
+}
+
+/*media query for desktop*/
+@media screen and (min-width: 1000px) {
+    #header #logo{
+        display: inline-block;
+        width: auto;
+    }
+    #header #navigation{
+        display: inline-block;
+        width: auto;
+    }
+    .whoiam{
+        max-width: 600px;
+        margin: auto;
+    }
+    .service,
+    .skill,
+    .work,
+    .fact,
+    .testimonial,
+    .post{
+        width: 31%;
+        margin: 1%;
+    }
+    .skill{
+        margin-top: 50px;
+    }
+    .testimonial{
+        margin-top: 80px;
+        margin-bottom: 50px;
+    }
+    .testimonial .two{
+        transform: scale(1.1);
+    }
+    #skills,
+    #by-numbers{
+        text-align: center;
+    }
+}

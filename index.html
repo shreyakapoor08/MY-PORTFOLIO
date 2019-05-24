@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" integrity="sha384-kW+oWsYx3YpxvjtZjFXqazFpA7UP/MbiY4jvs+RWZo2+N94PFZ36T6TFkc9O3qoB" crossorigin="anonymous"></script>
     <title>SHREYA KAPOOR PORTFOLIO</title>
-    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif" rel="stylesheet">
+    <script src="js/jquery-3.3.1.js"></script>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif" rel="stylesheet">
+
 </head>
 <body>
     <!--   header start-->
@@ -18,16 +20,16 @@
             <div id="nav-toggle">
                 <i class="fas fa-bars"></i>
             </div>
-            <nav id="navigation">
+            <div id="navigation">
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About me</a></li>
-                    <li><a href="">History</a></li>
-                    <li><a href="">Portfolio</a></li>
-                    <li><a href="">Blog</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li id="closebtn"><i class="fas fa-times"></i></li>
+                    <li><a href="">Home</a> </li>
+                    <li><a href="#services">About </a></li>
+                    <li><a href="#history">History</a> </li>
+                    <li><a href="#portfolio"> Portfolio</a></li>
+                    <li><a href="#contact-us"> Contact </a> </li>
                 </ul>
-            </nav>
+            </div>
         </div>
     </header>
     <!--header end    -->
@@ -38,10 +40,10 @@
             <div class="intro-text">
                 <h1>Hi, I'm <strong>Shreya Kapoor</strong> and I'm <em>Full Stack Web Developer</em></h1>
                 <div class="call-to-action">
-                    <a href="" class="btn btn-bg">
+                    <a href="mailto:shreyakapoor98@gmail.com" class="btn btn-bg">
                        <i class="fas fa-user"></i>Hire Me 
                     </a>
-                    <a href="" class="btn btn-highlight">
+                    <a href="ShreyaKapoor%20Resume.docx" class="btn btn-highlight">
                         <i class="fas fa-download"></i>My Resume
                     </a>
                 </div>
@@ -98,7 +100,7 @@
                              <i class="fas fa-database"></i>
                          </div>
                          <div class="service-title">
-                             <h3>Backend Development</h3>
+                             <h3>Backend</h3>
                          </div>
                          <div class="service-desc">
                              <p>Used Nodejs to handle server side request and render pages through it.</p>
@@ -172,7 +174,7 @@
                         </div>
                     </div>
 
-                    <div class="history work">
+                    <div class="history works">
                         <div class="history-title">
                             <div class="icon">
                                 <i class="fas fa-briefcase"></i>
@@ -490,7 +492,7 @@
                     </div>
                 </div>
                 
-                <div class="testimonial">
+                <div class="testimonial two">
                     <div class="testimonial-author">
                         <div class="img">
                             <img src="img/b5.jpg" alt="">
@@ -972,6 +974,12 @@
         </div>
     </footer>
     <!--footer end-->
+
+    <section id="side-button">
+        <div class="navigate-up">
+            <a href="#intro"><i class="fas fa-angle-up"></i> </a>
+        </div>
+    </section>
 
 </body>
 </html>
