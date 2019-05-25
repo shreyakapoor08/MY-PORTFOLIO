@@ -5,7 +5,7 @@
 }
 
 body{
-    font-family: 'IBM Plex Serif', serif;
+    font-family: 'Playfair Display', serif;
 }
 
 img{
@@ -40,8 +40,39 @@ ul{
     z-index: 99;
 }
 
+#header a{
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px;
+}
+
 #header:hover{
     background-color: #3d405b;
+}
+
+#logo{
+    width: 70%;
+    display: inline-block;
+    font-weight: bold;
+
+}
+
+#logo a{
+    font-size: 1.7em;
+    padding: 30px;
+    padding-left: 15px;
+    display: inline-block;
+}
+
+#nav-toggle{
+    width: 70px;
+    display: inline-block;
+    font-size: 1.5em;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0,0,0,.1);
+    border-radius: 10px;
 }
 
 #header.open #navigation{
@@ -52,37 +83,6 @@ ul{
 }
 #header.scrolled{
     background-color: #3d405b;
-}
-
-#logo{
-    width: 75%;
-    display: inline-block;
-    font-weight: bold;
-    font-size: 1.2em;  /*on own*/
-}
-
-#nav-toggle{
-    width: 70px;
-    display: inline-block;
-    font-size: 1.7em;
-    text-align: center;
-    padding: 5px;
-    background-color: rgba(0,0,0,.1);
-    border-radius: 10px;
-}
-
-#header a{
-    color: #fff;
-    text-decoration: none;
-    display: inline-block;
-    padding: 15px;
-}
-
-#logo a{
-    font-seze: 1.7em;
-    padding: 30px;
-    padding-left: 15px;
-    display: inline-block;
 }
 
 #navigation{
@@ -105,6 +105,21 @@ navigation a:hover{
     opacity: 1;
 }
 
+
+.contain-own{
+    padding: 15px;
+    max-width: 1100px;
+    margin: auto;
+}
+#closebtn{
+    text-align: right;
+    padding: 10px 20px;
+    font-size: 30px;
+}
+#closebtn:hover{
+    cursor: pointer;
+}
+
 /*header end*/
 
 /*intro start*/
@@ -119,7 +134,7 @@ navigation a:hover{
     position: relative;
     top: 100px;
     color: #fff;
-    font-size: 1.1em;
+    font-size: 1.2em;
     text-align: center;
 }
 .intro-text h1 strong,
@@ -196,24 +211,27 @@ navigation a:hover{
 }
 .service:hover .service-icon{
     background-color: #e07a5f;
-    outline: 5px solid #e07a5f;
     outline-offset: 5px;
+    outline-color: #e07a5f;
+    /*border: 2px solid #e07a5f;*/
 }
+
 .service-icon{
     font-size: 3.5em;
-    margin: 30px 0px;
-    background-color: rgba(0,0,0,.1);
+    margin: 30px 0;
+    background-color: rgba(0,0,0,0.1);
     display: inline-block;
     padding: 20px;
+    color: white;
+
     width: 110px;
     height: 110px;
     transform: rotate(45deg);
-    transition: background-color 0.4s, outline 0.4s, outline-offset 0.4s;
-    color: #fff;
     outline: 5px solid transparent;
-    outline-offset: 0px;
+    outline-offset: 0;
+    transition: all 0.4s;
 }
-.service-icon svg{
+.service-icon i{
     transform: rotate(-45deg);
 }
 .service-title{
@@ -237,6 +255,7 @@ navigation a:hover{
 #history{
     background-color: #e07a5f;
     color: #fff;
+    padding-bottom: 30px;
 }
 .history{
     margin: 30px 0px;
@@ -333,13 +352,13 @@ navigation a:hover{
     stroke-dashoffset: 40;
 }
 .skill-icon.second svg{
-    stroke-dashoffset: 35;
+    stroke-dashoffset: 30;
 }
 .skill-icon.third svg{
-    stroke-dashoffset: 50;
+    stroke-dashoffset: 45;
 }
 .skill-icon.fourth svg{
-    stroke-dashoffset: 10;
+    stroke-dashoffset: 35;
 }
 .soft-skills .skill-rating{
     position: relative;
@@ -354,6 +373,8 @@ navigation a:hover{
     position: relative;
     top: -30px;
 }
+
+/*technical skills*/
 .technical-skills .skill-rating{
     font-size: 1em;
 }
@@ -363,19 +384,80 @@ navigation a:hover{
 .technical-skills .skill{
     position: relative;
 }
-.technical-skills .skill-icon::after{
+
+.technical-skills .skill-icon.one::after{
     content: '';
-    width: 80%;
+    width: 90%;
     background-color: #e07a5f;
     height: 25px;
     position: absolute;
     left: 0;
     bottom: -30px;
 }
-.technical-skills .skill-icon::before{
+.technical-skills .skill-icon.one::before{
     content: '';
     width: 100%;
-    background-color: rgba(0,0,0,.2);
+    background-color: rgba(0,0,0,0.5);
+    height: 25px;
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+}
+
+/*Two Technical Skill Rating*/
+.technical-skills .skill-icon.two::after{
+    content: '';
+    width: 85%;
+    background-color: #e07a5f;
+    height: 25px;
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+}
+.technical-skills .skill-icon.two::before{
+    content: '';
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    height: 25px;
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+}
+
+/*Three - Technical skill rating*/
+.technical-skills .skill-icon.three::after{
+    content: '';
+    width: 65%;
+    background-color: #e07a5f;
+    height: 25px;
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+}
+.technical-skills .skill-icon.three::before{
+    content: '';
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    height: 25px;
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+}
+
+/*Four - Rating of the Technical Skill*/
+.technical-skills .skill-icon.four::after{
+    content: '';
+    width: 65%;
+    background-color: #e07a5f;
+    height: 25px;
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+}
+.technical-skills .skill-icon.four::before{
+    content: '';
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
     height: 25px;
     position: absolute;
     left: 0;
@@ -386,49 +468,69 @@ navigation a:hover{
 /*portfolio start*/
 #portfolio{
     background-color: #dddddd;
+    padding: 20px;
 }
 .work{
     margin: 20px 0;
-    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+    /*padding: 20px;*/
+    min-height: 200px;
+    width: auto;
     position: relative;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
 .work:hover .work-text{
     opacity: 1;
 }
+.work:hover .work-icon{
+    display: none;
+}
 .work-text{
-    background-color: white;
+    background-color: rgba(255,255,255,0.9);
     padding: 10px;
+    min-height: 200px;
     opacity: 0;
+    text-align: justify;
+    width: auto;
     transition: opacity 0.4s;
 }
 .work-text h4{
     font-size: 1.5em;
     padding: 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: #191c35;
 }
 .work.one{
     background-image: url("../img/piggame.JPG");
     background-size: cover;
+    background-repeat: no-repeat;
 }
+
 .work.two{
     background-image: url("../img/forkify.JPG");
     background-size: cover;
+    background-repeat: no-repeat;
 }
+
 .work.three{
     background-image: url("../img/budgetapp.JPG");
     background-size: cover;
+    background-repeat: no-repeat;
 }
+
 .work-icon{
     position: absolute;
-    padding: 20px;
+    /*height: 100px;*/
+    /*width: 100px;*/
     border-radius: 50%;
+    background-color: #3d405b;
     right: 10px;
     bottom: 10px;
-    background-color: #3d405b;
-    color: #fff;
+    color: white;
+    padding: 20px;
     text-align: center;
 
 }
-
 /*portfolio end*/
 
 /*by numbers start*/
@@ -449,50 +551,51 @@ navigation a:hover{
 /*by numbers end*/
 
 /*testimonial start*/
-#testimonials{
-    color: white;
+#testimonal{
+    color: #ffffff;
     background-color: #191c35;
 }
-.testimonial{
-    margin: 80px auto;
-    box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+.testimonal{
+    margin: 30px auto;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
     text-align: center;
     background-color: #3d405b;
-    border-radius: 10px;
     max-width: 350px;
 }
-.testimonial img{
+
+.testimonal img{
     height: 120px;
     width: 120px;
     border: 5px solid rgba(0,0,0,0.2);
     border-bottom: 5px solid #e07a5f;
-    border-radius: 50%;
-    margin-top: -60px;
+    margin-top: -20px;
 }
-.testimonial-author .name{
+.testimonal-author .name{
     text-transform: uppercase;
     font-weight: bold;
     font-size: 1.7em;
     padding: 10px 0;
 }
-.testimonial-author .position{
+.testimonal-author .position{
     padding: 10px 0;
     font-style: italic;
     opacity: 0.9;
     font-size: 1.1em;
+
 }
-.testimonial-content .text{
+.testimonal-content .text{
     padding: 20px;
+
 }
-.testimonial-content{
-    position: relative; /*icon will be placed according to the testimonial content */
+.testimonal-content{
+    position: relative;
 }
-.testimonial-content .icon{
-    font-size: 1.8em;
-    position: absolute;
-    left: 15px;
-    top: -10px;
+.testimonal-content .icon{
+    font-size:1.7em ;
     color: #e07a5f;
+    position: absolute;
+    left: 10px;
+    top: -15px;
 }
 /*testimonial end*/
 
@@ -502,9 +605,9 @@ navigation a:hover{
 }
 .post{
     margin: 20px 0;
-    box-shadow: 0px 0px 15px rgba(0,0,0,.1);
-    text-align: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
     background-color: white;
+    text-align: center;
     color: #3d405b;
 }
 .post-img{
@@ -514,24 +617,24 @@ navigation a:hover{
 .post-author{
     margin-top: -50px;
 }
-.post-author .author-img img{
+.post-author .author-img{
     height: 100px;
     width: 100px;
     border-radius: 50%;
     margin: auto;
-    border: 5px solid rgba(61,64,91,0.8);
-    border-bottom-color: #e07a5f;
+    border: 5px solid rgba(0,0,0,0.2);
+    border-bottom: 5px solid #e07a5f ;
 }
 .author-name{
-    padding: 5px 0px;
+    padding: 5px 0;
 }
 .author-job{
     font-size: 0.9em;
     font-style: italic;
 }
 .post-title{
-    padding: 30px 0px;
-    font-size: 2em;
+    padding: 20px 0;
+    font-size: 1.5em;
     font-weight: bold;
 }
 .post-reaction{
@@ -546,146 +649,205 @@ navigation a:hover{
     padding: 15px 0;
 }
 .reaction .text{
-    display: inline-block;
     padding: 15px 0;
+    display: inline-block;
 }
-/*blog end*/
+/*Blog End*/
 
-/*get in touch start*/
+/*Get in touch start*/
 #get-in-touch{
     background-color: #191c35;
-    color: white;
+    color: #ffffff;
+    padding: 30px 0;
 }
-/*get in touch end*/
+/*Getin touch end*/
 
-/*contact us start*/
+/*Contact us section*/
+
 #contact-us{
     background-color: #dddddd;
 }
 form{
     padding: 20px;
     background-color: white;
-    margin: 30px 0px;
+    margin: 30px 0;
+    box-shadow: 0 0 18px 10px rgba(0,0,0,0.1);
 }
-form input,
-form textarea{
+form input, form textarea{
     width: 100%;
     padding: 10px;
-    margin: 10px 0px;
-    border: none;
+    margin: 10px 0;
     outline: none;
     background-color: #dddddd;
-    border: 3px solid transparent;
     transition: border 0.4s;
+    border: 3px solid transparent;
 }
-form input:hover,
-form input:focus,
-form textarea:hover,
-form textarea:focus{
+form input:hover,form input:focus
+,form textarea:hover,form textarea:focus {
     border: 3px solid #e07a5f;
 }
 form button{
-    color: white;
+    color: #ffffff;
     background-color: #e07a5f;
     margin-top: 20px;
-    box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+    /*border: 3px solid transparent;*/
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
-/*contact us end*/
+form button:hover{
+    cursor: pointer;
+}
+textarea[name=contact-msg]{
+    resize: none;
+}
+/*Contact us section*/
 
-/*footer start*/
+
+
+/*Footer start*/
 #footer{
     background-color: #191c35;
-    color: #fff;
+    color: #ffffff;
+    padding: 30px 0;
     text-align: center;
+
 }
-#footer .social-links{
+#footer .social-link{
     margin: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 #footer .link{
     display: inline-block;
     background-color: rgba(0,0,0,0.2);
-    font-size: 1.2em;
+    font-size: 1.3em;
     padding: 20px;
-    margin: 5px;
+    margin: 10px;
+
     border-radius: 50%;
-    height: 70px;
-    width: 70px;
+    height: 65px;
+    width: 65px;
     border: 3px solid transparent;
-    transition: border 0.4s, color 0.4s;
+    transition: border 0.4s;
+}
+#footer .link a{
+    text-decoration: none;
+    color: inherit;
+}
+#footer .link i{
+    position: relative;
+    top: -5px;
 }
 #footer .link:hover{
-    border: 3px solid #e07a5f;
+    cursor: pointer;
     color: #e07a5f;
+    border-color: #e07a5f;
+}
+.copyright{
+    text-align: center;
+    font-size: 1em;
+    font-weight: 200;
+
 }
 
-/*footer end*/
-
+#side-button{
+    opacity: 0;
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    transition: opacity 0.5s,transform 0.4s;
+}
+#side-button .navigate-up{
+    height: 65px;
+    width: 65px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #e07a5f;
+    box-shadow: 0 0 15px 10px rgba(0,0,0,0.1);
+    padding: 15px 0;
+}
+.navigate-up a{
+    text-decoration: none;
+    color: white;
+    /*font-size: 1.2em;*/
+}
+.navigate-up a i{
+    font-size: 1.8em;
+}
 
 /*media query for tablets*/
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 750px){
     #header{
 
     }
     #navigation{
         transform: translateX(0px);
-        width: 100%;
         background-color: inherit;
-        padding-left: 15px;
+        width: 100%;
+        padding-left: 20px ;
+        /*Previously min-height was given some value*/
         min-height: auto;
+        /*previously position was diff*/
         position: static;
     }
+    /*Remove nav toggle*/
     #nav-toggle{
         display: none;
     }
     #navigation li{
         display: inline-block;
     }
+    #closebtn{
+        display: none;
+        opacity: 0;
+    }
     #intro{
-        min-height: 600px;
+        min-height: 658px;
     }
     .intro-text{
         top: 200px;
     }
     .intro-text .btn{
         display: inline-block;
-        margin: 10px;
+        margin: 15px;
     }
     .service,
     .history,
     .skill,
     .work,
     .fact,
-    .testimonial{
+    .testimonal,
+    .post{
         display: inline-block;
         width: 47.5%;
         margin: 1%;
     }
-    .testimonial{
-        margin-top: 80px;
-    }
-    .testimonials-container{
-        text-align: center;
-    }
-    #skills{
-        padding-bottom: 50px;
-    }
-    #get-in-touch{
-        text-align: center;
-    }
+
     #history .call-to-action{
         display: inline-block;
         width: 200px;
         margin: auto;
     }
-    #contact-us form{
-        max-width: 500px;
-        margin: 30px auto;
+    #skills{
+        padding-bottom: 40px;
+    }
+    .testimonal{
+        margin-top: 80px;
+    }
+    .testimonal-container{
+        text-align: center;
+    }
+    #get-in-touch{
+        text-align: center;
+    }
+    #blog{
+        text-align: center;
     }
 }
 
-/*media query for desktop*/
-@media screen and (min-width: 1000px) {
+
+/*Media query for Desktop*/
+
+@media screen and (min-width: 1000px)
+{
     #header #logo{
         display: inline-block;
         width: auto;
@@ -694,31 +856,39 @@ form button{
         display: inline-block;
         width: auto;
     }
-    .whoiam{
+    .whoiam,#contact-us .container-own{
         max-width: 600px;
         margin: auto;
+    }
+    #contact-us{
+        padding-bottom: 50px;
+    }
+    #closebtn{
+        display: none;
+        opacity: 0;
     }
     .service,
     .skill,
     .work,
     .fact,
-    .testimonial,
-    .post{
+    .testimonal,.post{
         width: 31%;
         margin: 1%;
     }
     .skill{
         margin-top: 50px;
     }
-    .testimonial{
+    .testimonal{
         margin-top: 80px;
         margin-bottom: 50px;
     }
-    .testimonial .two{
+    .testimonal.second{
         transform: scale(1.1);
     }
-    #skills,
-    #by-numbers{
+    #skills,#by-numbers{
         text-align: center;
+    }
+    #history .call-to-action{
+        display: block;
     }
 }
